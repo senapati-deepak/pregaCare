@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var workerSchema = new Schema({
+    userid: { type: String },
     name: { type: String },
     contact: { type: String , unique : true},
     address: { type: String },
@@ -14,6 +15,7 @@ var workerSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'patient'
     }],
+    email: {type: String},
     remarks: { type: String },
     education: { type: String },
     dateOfJoining: { type: String },

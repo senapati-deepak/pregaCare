@@ -1,0 +1,50 @@
+[{
+        userid: "w1",
+        "_id" : ObjectId("5b781f629b99655a21c89a3a"),
+        "name" : "Maneka Gowda",
+        "contact" : "8745823409",
+        "address" : "Plot No. 34, Laxmi Vihar",
+        "dob" : "12/08/1973",
+        "patientIDs" : [
+                987654321012345,
+                987654321012501
+        ],
+        "remarks" : "Good Worker.",
+        "education" : "B.Com",
+        "dateOfJoining" : "18/05/2006",
+        "password" : "abc",
+        "email": "sample@mail.com"
+},
+{
+        userid: "w2",
+        "_id" : ObjectId("5b781f629b99655a21c89a3b"),
+        "name" : "Smriti Nayak",
+        "contact" : "9834092345",
+        "address" : "Plot No. 2, Shastri Vihar",
+        "dob" : "19/06/1968",
+        "patientIDs" : [
+                987654321012502
+        ],
+        "remarks" : "Hard Working",
+        "education" : "12th Pass",
+        "dateOfJoining" : "26/02/2009",
+        "password" : "abc",
+        "email": "sample@mail.com"
+},
+{
+        userid: "w3",
+        "_id" : ObjectId("5b781f629b99655a21c89a3c"),
+        "name" : "Padmaja Routray",
+        "contact" : "7872367120",
+        "address" : "Plot No. 22, Niladri Vihar",
+        "dob" : "28/08/1975",
+        "patientIDs" : [
+                987654321012502,
+                987654321012345
+        ],
+        "remarks" : "Polite",
+        "education" : "12th Pass",
+        "dateOfJoining" : "15/04/2012",
+        "password" : "abc",
+        "email": "sample@mail.com"
+}]

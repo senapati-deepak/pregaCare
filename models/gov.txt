@@ -1,0 +1,8 @@
+{
+    userid: "g1",
+    name: "nvs",
+    contact: 123456789,
+    address: "goa",
+    password: "nvs", 
+    email: "sample@mail.com"
+}

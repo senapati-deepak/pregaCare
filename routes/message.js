@@ -1,7 +1,3 @@
-////////////////////////////////////////////////////////////////
-///////////**** Routes for all the API calls ******/////////////
-////////////////////////////////////////////////////////////////
-
 var express = require('express');
 var router = express.Router();
 
@@ -15,14 +11,6 @@ var signup = require('../controllers/signup')
 router.get('/', function(req, res, next) {
   res.send('API is working');
 });
-
-router.post('/signup', signup.UserSignup);
-
-router.post('/login', login.UserLogin);
-
-
-
-
 
 
 

@@ -1,12 +1,5 @@
-////////////////////////////////////////////////////////////////
-///**** Schema definition for an ASHA worker ************///////
-////////////////////////////////////////////////////////////////
-
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-
-var patientSchema = new Schema({
-    userid: {type: String},
+{
+    userid: {type: Number},
     name: { type: String },
     date: { type: String },
     contact: { type: String , unique : true },
@@ -27,10 +20,7 @@ var patientSchema = new Schema({
     weight: { type: String },
     allergy : { type: String },
     delivery_count : { type : String }, 
-    email: {type: String}, 
-    password: {type: String}
-});
+    email: {type: String}
+}
 
-var patientModel = mongoose.model('patient', patientSchema);
 
-module.exports = patientModel;
