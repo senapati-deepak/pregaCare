@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="node_modules/jqvmap/dist/jqvmap.min.css" />
+    <link rel="stylesheet" href="node_modules/pwstabs/assets/jquery.pwstabs.min.css">
+    <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body class="sidebar-mini">
+    <div class="container-scroller">
+
+        <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-left navbar-brand-wrapper">
+                <a class="navbar-brand brand-logo-mini" href="#">
+                    <i class="fa fa-female"></i>
+                </a>
+                <a class="navbar-brand brand-logo" href="/">
+                    <i class="fa fa-female"></i>PregAssist</a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
+                <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
+                  <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <ul class="navbar-nav ml-sm-auto">
+                    <!-- Google translate dropdown -->
+                    <div id="google_translate_element"></div>
+                </ul>
+                <ul>
+                    <a href="/"><button type="button" class="navbar-nav btn btn-info" style="font-size: 15px; border-radius: 40px;">
+                                Logout
+                            </button></a>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper">
+
+            <div class="row row-offcanvas row-offcanvas-right">
+
+                <!-- Side Nav-->
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_registration">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">New Patient</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_list">
+                                <i class="fa fa-address-book-o"></i>
+                                <span class="menu-title">Patient List</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="vaccination_list">
+                                <i class="fas fa-syringe"></i>
+                                <span class="menu-title">Vaccination List</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="diet_plan">
+                                <i class="fas fa-utensils"></i>
+                                <span class="menu-title">Diet Plan</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="asha_list">
+                                <i class="fa fa-address-book-o"></i>
+                                <span class="menu-title">Asha worker List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="documents_upload">
+                                <i class="fa fa-arrow-up"></i>
+                                <span class="menu-title">Upload&nbsp;</br>Documents</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="content-wrapper">
+                    <h3 class="page-title">Dashboard</h3>
+
+                    <div class="row grid-margin">
+                        <div class="col-12 col-md-4 grid-margin grid-margin-md-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">BIO DATA</h2>
+                                    <div class="table-responsive">
+                                        <table class="table center-aligned-table">
+                                            <thead>
+                                                <tr class="text-primary text-center">
+                                                    <td colspan="2" class="text-center">
+                                                        <img src="./images/profile.jpg" alt="Profile picture" height="200px" width="200px">
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="text-center">
+                                                    <th>Name : </th>
+                                                    <td>Dr. Sambit Patra</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <th>Date of Birth : </th>
+                                                    <td>6
+                                                        <sup>th</sup> October 1975</td>
+
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <th>Address : </th>
+                                                    <td>101 B , Keshari Enclave
+                                                        <br>Nuashahi , Nayapalli , Bhubaneswar</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <th>Email ID : </th>
+                                                    <td>spatra75@gmail.com</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <th>Contact : </th>
+                                                    <td>7896543201</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <th>FAX : </th>
+                                                    <td>0674 - 2384788</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--
+                                    <div class="card-body bg-primary text-white" id="context-menu-simple">
+                                        <p class="card-text">
+                                            Right click somewhere in this colored area for simple context menu
+                                        </p>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">Missed Vaccinations</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="card-body  text-white" id="context-menu-access">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr class="">
+                                                        <th>Patient Id</th>
+                                                        <th>Patient Name</th>
+                                                        <th>Contact No.</th>
+                                                        <th>Address</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Anita Desai</td>
+                                                        <td>276840376</td>
+                                                        <td>UP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Sanjukta Mohapatra</td>
+                                                        <td>7854123698</td>
+                                                        <td>OD</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Meneka Gowda</td>
+                                                        <td>7854123698</td>
+                                                        <td>CG</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                        <span class="float-right">
+                            <a href="#">Illuminati</a> &copy; 2018
+                        </span>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="node_modules/jquery-circle-progress/dist/circle-progress.min.js"></script>
+    <script src="node_modules/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="node_modules/flot/jquery.flot.js"></script>
+    <script src="node_modules/flot/jquery.flot.resize.js"></script>
+    <script src="node_modules/flot.curvedlines/curvedLines.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/sidebar-icon.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/sparkline.js"></script>
+    <script src="js/progress-bar.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        /////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////// For initializing the google translate dropdown////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+</body>
+
+
+</html>

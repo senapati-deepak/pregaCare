@@ -1,0 +1,8 @@
+.pictures img{
+    height: 500px;
+    width: 300px;
+}
+
+.pictures {
+    margin : 20px;
+}

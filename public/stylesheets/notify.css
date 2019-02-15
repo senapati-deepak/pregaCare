@@ -1,0 +1,31 @@
+
+.submit {
+    background: #ed1000 !important;
+    border-radius: 15px !important;
+    border: none;
+    box-shadow: 5px 15px 15px #888;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20%;
+    font-size: 3em;
+    font-family: 'Comfortaa', cursive;
+    transition: box-shadow  0.18s ease-in-out;
+    text-shadow: 1px 1px black;
+}
+
+.submit:hover{
+    box-shadow: 3px 8px 8px #888;
+}
+
+.submit:active{
+    box-shadow: 1px 2px 2px #888;
+}
+
+.text-below {
+    color: rgb(0, 81, 255);
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold
+}
+
+.button5 {border-radius: 75%;}

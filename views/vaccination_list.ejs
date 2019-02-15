@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vaccination List</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="node_modules/jqvmap/dist/jqvmap.min.css" />
+    <link rel="stylesheet" href="node_modules/pwstabs/assets/jquery.pwstabs.min.css">
+    <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- STylesheet for Fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body class="sidebar-mini">
+
+    <div class="container-scroller">
+
+        <!-- Top Nav -->
+        <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-left navbar-brand-wrapper">
+                <a class="navbar-brand brand-logo-mini" href="#">
+                    <i class="fa fa-female"></i>
+                </a>
+                <a class="navbar-brand brand-logo" href="/">
+                    <i class="fa fa-female"></i>PregAssist</a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
+                <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
+                  <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <ul class="navbar-nav ml-lg-auto">
+                    <!-- Google translate dropdown -->
+                    <div id="google_translate_element"></div>
+
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper">
+
+            <div class="row row-offcanvas row-offcanvas-right">
+
+                <!-- Side Nav-->
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_registration">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">New Patient</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_list">
+                                <i class="fa fa-address-book-o"></i>
+                                <span class="menu-title">Patient List</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="vaccination_list">
+                                <i class="fas fa-syringe"></i>
+                                <span class="menu-title">
+                                    <b>Vaccination List</b>
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="diet_plan">
+                                <i class="fas fa-utensils"></i>
+                                <span class="menu-title">Diet Plan</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="asha_list">
+                                <i class="fa fa-address-book-o"></i>
+                                <span class="menu-title">
+                                    Asha worker List
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="records_upload">
+                                <i class="fa fa-arrow-up"></i>
+                                <span class="menu-title">Upload&nbsp;</br> Patient Records</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="content-wrapper">
+                    <h2>
+                        <u>Vaccination List</u>
+                    </h2>
+                    <br>
+                    <!-- Table for Vaccination List For Pregnant Women -->
+                    <h4>Vaccines for Pregnant Women</h4>
+                    <div class="table-responsive row">
+                        <div class="col-md-3"></div>
+                        <table class="table table-striped col-md-6">
+                            <thead>
+                                <tr class="">
+                                    <th>Month</th>
+                                    <th>Vaccination</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4th Month</td>
+                                    <td>Tetanus Toxoid</td>
+                                </tr>
+                                <tr>
+                                    <td>5th Month</td>
+                                    <td>Tetanus Toxoid</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <br>
+                    <!-- Table for Vaccination List For Children -->
+                    <h4>Vaccines for Children</h4>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="table-responsive col-md-8">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="">
+                                        <th>Age</th>
+                                        <th>BCG</th>
+                                        <th>Hepatitis B</th>
+                                        <th>OPV</th>
+                                        <th>Measels</th>
+                                        <th>DPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>After Birth</td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6 Weeks</td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 Weeks</td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>14 Weeks</td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10-12 Months</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="table-responsive col-md-8">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="">
+                                        <th>Age</th>
+                                        <th>DPT</th>
+                                        <th>OPV</th>
+                                        <th>Measles</th>
+                                        <th>JE</th>
+                                        <th>TT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>16-24 Months</td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5-6 Years</td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 Years</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>16 Years</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fas fa-syringe"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                        <span class="float-right">
+                            <a href="#">Illuminati</a> &copy; 2018
+                        </span>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="node_modules/jquery-circle-progress/dist/circle-progress.min.js"></script>
+    <script src="node_modules/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="node_modules/flot/jquery.flot.js"></script>
+    <script src="node_modules/flot/jquery.flot.resize.js"></script>
+    <script src="node_modules/flot.curvedlines/curvedLines.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/sidebar-icon.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/sparkline.js"></script>
+    <script src="js/progress-bar.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        /////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////// For initializing the google translate dropdown////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+</body>
+
+
+</html>

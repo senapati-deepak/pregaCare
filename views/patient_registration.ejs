@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>New Patient</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="bower_components/jsgrid/dist/jsgrid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+    <!-- Stylesheet for Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="sidebar-mini">
+    <div class="container-scroller">
+
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-left navbar-brand-wrapper">
+                <a class="navbar-brand brand-logo-mini" href="#">
+                    <i class="fa fa-female"></i>
+                </a>
+                <a class="navbar-brand brand-logo" href="/">
+                    <i class="fa fa-female"></i>PregAssist</a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
+                <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
+                              <span class="navbar-toggler-icon"></span>
+                            </button> -->
+                <ul class="navbar-nav ml-lg-auto">
+                    <!-- Google translate dropdown -->
+                    <div id="google_translate_element"></div>
+
+                </ul>
+                <ul>
+                    <a href="/"><button type="button" class="navbar-nav btn btn-info" style="font-size: 15px; border-radius: 40px;">
+                        Logout
+                    </button></a>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper">
+
+            <div class="row row-offcanvas row-offcanvas-right">
+
+                <!-- Side Nav-->
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_registration">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">
+                                    <b>New Patient</b>
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_list">
+                                <i class="fa fa-address-book-o"></i>
+                                <span class="menu-title">Patient List</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="vaccination_list">
+                                <i class="fas fa-syringe"></i>
+                                <span class="menu-title">Vaccination List</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="diet_plan">
+                                <i class="fas fa-utensils"></i>
+                                <span class="menu-title">Diet Plan</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="asha_list">
+                                <i class="fa fa-address-book-o"></i>
+                                <span class="menu-title">Asha worker List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="records_upload">
+                                <i class="fa fa-arrow-up"></i>
+                                <span class="menu-title">Upload&nbsp;</br> Patient Records</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="content-wrapper">
+                    <h3 class="page-title">Patient Registration</h3>
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <!-- Form Registration -->
+                                    <form class="forms-sample" id="reg-form">
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Patient Name:</label>
+                                                <input type="text" class="form-control p-input" id="name" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">DOB:</label>
+                                                <input type="date" class="form-control p-input" id="age" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Education:</label>
+                                                <input type="text" class="form-control p-input" id="edu" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Occupation:</label>
+                                                <input type="text" class="form-control p-input" id="occu" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Contact No.:</label>
+                                                <input type="text" class="form-control p-input" id="contact" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Address:</label>
+                                                <input type="text" class="form-control p-input" id="address" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Date of Conceiving:</label>
+                                                <input type="date" class="form-control p-input" id="doc" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Expected Delivery Date:</label>
+                                                <input type="date" class="form-control p-input" id="dod" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">No. of Children:</label>
+                                                <input type="text" class="form-control p-input" id="noc" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Complications:</label>
+                                                <input type="text" class="form-control p-input" id="comp" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Blood Group:</label>
+                                                <select type="text" class="form-control p-input" id="blgrp">
+                                                    <option value="O+ve">O+ve</option>
+                                                    <option value="O-ve">O-ve</option>
+                                                    <option value="A+ve">A+ve</option>
+                                                    <option value="A-ve">A-ve</option>
+                                                    <option value="B+ve">B+ve</option>
+                                                    <option value="B-ve">B-ve</option>
+                                                    <option value="AB+ve">AB+ve</option>
+                                                    <option value="AB-ve">AB-ve</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Height(cm):</label>
+                                                <input type="text" class="form-control p-input" id="ht" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Weight(kg):</label>
+                                                <input type="text" class="form-control p-input" id="wt" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Allergy(if any):</label>
+                                                <input type="text" class="form-control p-input" id="alleg" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                <label for="exampleInputEmail1">Remarks:</label>
+                                                <input type="text" class="form-control p-input" id="rem" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                        <span class="float-right">
+                            <a href="#">Illuminati</a> &copy; 2018
+                        </span>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/sidebar-icon.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/patient_reg.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/sidebar-icon.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/alerts.js"></script>
+
+    <script type="text/javascript">
+        /////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////// For initializing the google translate dropdown////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+</body>
+
+</html>`
