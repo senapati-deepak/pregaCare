@@ -7,6 +7,11 @@ $(document).ready(function() {
         var type = $("#type").val();
         $.post("/api/login", {userid: uid, password: pwd, type: type}, function(data) {
             console.log(data);
+            if(!data.code) {
+                location.href = "/dashboard";
+            }
         });
     });
+
+
 });

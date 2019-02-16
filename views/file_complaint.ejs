@@ -49,81 +49,37 @@
                 <!-- Side Nav-->
                 
                 <%- include partials/side_nav.ejs %>
-                <!-- Table for Diet Plan -->
-                <div class="content-wrapper">
-                    <h3 class="page-title">Diet Plan</h3>
-                    <div class="table-responsive row">
-                        <div class="col-md-2"></div>
-                        <table class="table table-striped col-md-6">
-                            <tbody>
-                                <tr>
-                                    <td rowspan="3">
-                                        <h6>1st Trimester</h6>
-                                    </td>
-                                    <td>Folate</td>
-                                    <td>Leafy green vegetables, Citrus fruits, Beans, Breads, Cereals, Rice, Pastas.</td>
-                                </tr>
-                                <tr>
-                                    <td>Vitamin B6</td>
-                                    <td>Meat, fish, vegetable, fruits, nuts, wholegrains.</td>
-                                </tr>
-                                <tr>
-                                    <td>Iron-rich meals</td>
-                                    <td>Meat, fish, Poultry, Bean, Pea, Lentil, Green Leafy Vegetables.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <br>
-                    <div class="table-responsive row">
-                        <div class="col-md-2"></div>
-                        <table class="table table-striped col-md-6">
-                            <tbody>
-                                <tr>
-                                    <td rowspan="3">
-                                        <h6>2nd Trimester</h6>
-                                    </td>
-                                    <td>Calcium</td>
-                                    <td> milk, cheese and yogurt, seafood, leafy greens, legumes, dried fruit.</td>
-                                </tr>
-                                <tr>
-                                    <td>Vitamin D</td>
-                                    <td>mushroom, cheese, egg, fish.</td>
-                                </tr>
-                                <tr>
-                                    <td>Omega 3 fatty acid</td>
-                                    <td>fish, seed, walnut.</td>
-                                </tr>
+            <div class="content-wrapper">
+                    <h3 class="page-title">New Complaint</h3>
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
 
-                            </tbody>
-                        </table>
-                        <div class="col-md-2"></div>
+                <form class="forms-sample" id="com-form">
+                    <div class="row">
+                        <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                            <label for="exampleInputEmail1">Complaint Title:</label>
+                            <input type="text" class="form-control p-input" id="title" aria-describedby="emailHelp">
+                        </div>
                     </div>
-                    <br>
-                    <div class="table-responsive row">
-                        <div class="col-md-2"></div>
-                        <table class="table table-striped col-md-6">
-                            <tbody>
-                                <tr>
-                                    <td rowspan="3">
-                                        <h6>3rd Trimester</h6>
-                                    </td>
-                                    <td>Energy Rich foods</td>
-                                    <td>Carbohydrates, fats.</td>
-                                </tr>
-                                <tr>
-                                    <td>Vitamin K</td>
-                                    <td>Green leafy vegetables,,Vegetables,Fish, liver, meat, eggs, and cereals.</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <div class="col-md-2"></div>
+                    <div class="row">
+                        <div class="form-group col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                            <label for="exampleInputEmail1">Complaint Body:</label>
+                            <textarea type="text" rows="10" class="form-control p-input" id="content" aria-describedby="emailHelp"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
+                        </div>
                     </div>
 
-
+                </form>
+                    </div>
                 </div>
+            </div>
+        </div>
 
             </div>
 
@@ -159,6 +115,7 @@
     <script src="js/chart.js"></script>
     <script src="js/sparkline.js"></script>
     <script src="js/progress-bar.js"></script>
+    <script src="js/file-complaint.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
         /////////////////////////////////////////////////////////////////////////////////////////

@@ -39,12 +39,15 @@ var UserLogin = function (req , res){
         if (err) throw err;
         if (doc) {
                 if (doc.password === req.body.password) {
-                    res.json({msg: "Passed!!"});
+                    req.session.type = req.body.type;
+                    console.log("Session added:....", doc);
+                    req.session.user = doc;
+                    res.json({code: 0, msg: "Passed!!"});
                 } else {
-                    res.json({ msg: "Invalid Password, Enter again" });
+                    res.json({ code: 1, msg: "Invalid Password, Enter again" });
                 }
         } else {
-            res.json({ "msg": "User ID not found" });
+            res.json({ code: -1, "msg": "User ID not found" });
         }
 
     })

@@ -54,54 +54,8 @@
         <div class="row row-offcanvas row-offcanvas-right">
 
             <!-- Side Nav-->
-            <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="patient_registration">
-                            <i class="fa fa-plus"></i>
-                            <span class="menu-title">
-                                    <b>New Patient</b>
-                                </span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="patient_list">
-                            <i class="fa fa-address-book-o"></i>
-                            <span class="menu-title">Patient List</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="vaccination_list">
-                            <i class="fas fa-syringe"></i>
-                            <span class="menu-title">Vaccination List</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="diet_plan">
-                            <i class="fas fa-utensils"></i>
-                            <span class="menu-title">Diet Plan</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="asha_list">
-                            <i class="fa fa-address-book-o"></i>
-                            <span class="menu-title">Asha worker List</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="records_upload">
-                            <i class="fa fa-arrow-up"></i>
-                            <span class="menu-title">Upload&nbsp;</br> Patient Records</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </nav>
-
+            
+                <%- include partials/side_nav.ejs %>
             <div class="content-wrapper">
                 <h3 class="page-title">Upload/View Patient Records</h3>
                 <div class="row mb-2">

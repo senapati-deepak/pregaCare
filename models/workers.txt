@@ -12,7 +12,7 @@
         "remarks" : "Good Worker.",
         "education" : "B.Com",
         "dateOfJoining" : "18/05/2006",
-        "password" : "abc",
+        "password" : "nvs",
         "email": "sample@mail.com"
 },
 {
@@ -28,7 +28,7 @@
         "remarks" : "Hard Working",
         "education" : "12th Pass",
         "dateOfJoining" : "26/02/2009",
-        "password" : "abc",
+        "password" : "nvs",
         "email": "sample@mail.com"
 },
 {
@@ -45,6 +45,6 @@
         "remarks" : "Polite",
         "education" : "12th Pass",
         "dateOfJoining" : "15/04/2012",
-        "password" : "abc",
+        "password" : "nvs",
         "email": "sample@mail.com"
 }]
