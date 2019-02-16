@@ -15,7 +15,7 @@ var NewComplaint = function (req , res){
     // User Login function.
     console.log(req.body);
     console.log(req.session.user._id)
-    var rec = { title: title, content: req.body.content, patient: ObjectId(req.session.user._id) }
+    var rec = { title: req.body.title, content: req.body.content, patient: ObjectId(req.session.user._id) }
     var newC = new complaintModel(rec);
     newC.save(newC, function(err, doc) {
         if(err) throw err;

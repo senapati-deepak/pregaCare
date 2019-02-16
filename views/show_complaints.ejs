@@ -48,37 +48,44 @@
 
                 <!-- Side Nav-->
                 
-                <%- include partials/side_nav.ejs %>
+            <%- include partials/side_nav.ejs %>
             <div class="content-wrapper">
-                    <h3 class="page-title">New Complaint</h3>
-                    <div class="row mb-2">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
+                <h3 class="page-title">Complaints</h3>
+                <table class="table table-bordered text-center">
+                    <thead style="font-weight:bolder; font-size: 2em;">
+                        <th>Complaint</th>
+                        <th>Action</th>
+                    </thead>
+                <% for(var i = 0; i<complaints.length; i++) {%>
+                    <tbody style="font-size: 1.8em">
+                        <td><%= complaints[i].title %></td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#<%=i%>">View</button></td>
+                    </tbody>
+                    <div class="modal" id="<%=i%>">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
 
-                <form class="forms-sample" id="reg-form">
-                    <div class="row">
-                        <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                            <label for="exampleInputEmail1">Complaint Title:</label>
-                            <input type="text" class="form-control p-input" id="title" aria-describedby="emailHelp">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"><%= complaints[i].title %></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                            <label for="exampleInputEmail1">Complaint Body:</label>
-                            <textarea type="text" rows="10" class="form-control p-input" id="body" aria-describedby="emailHelp"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
-                        </div>
-                    </div>
 
-                </form>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <%= complaints[i].content %>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+
+                        </div>
                     </div>
-                </div>
-            </div>
+                    </div>
+                <% } %>
+                </table>
         </div>
 
             </div>

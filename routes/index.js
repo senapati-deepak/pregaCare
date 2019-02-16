@@ -7,6 +7,7 @@ var router = express.Router();
 
 var patientModel = require('../models/patient');
 var workerModel = require('../models/worker');
+var complaintModel = require('../models/complaint');
 
 
 /* GET home page. */
@@ -117,7 +118,10 @@ router.get("/file_complaint", function(req, res, next) {
 
 router.get("/show_complaints", function(req, res, next) {
     if(req.session.user && req.session.type) {
-        res.render('show_complaints.ejs', { type: req.session.type, user: req.session.user });
+        complaintModel.find({}, function(err, docs) {
+            if(err) throw err;
+            res.render('show_complaints.ejs', { type: req.session.type, user: req.session.user, complaints: docs });
+        });
     } else {
         res.redirect("/");
     }
