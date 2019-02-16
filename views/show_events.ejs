@@ -47,52 +47,60 @@
             <div class="row row-offcanvas row-offcanvas-right">
 
                 <!-- Side Nav-->
-                
-            <%- include partials/side_nav.ejs %>
-            <div class="content-wrapper">
-                <h3 class="page-title">Events</h3>
-                <table class="table table-bordered text-center">
-                    <thead style="font-weight:bolder; font-size: 2em;">
-                        <th>Event</th>
-                        <th>Action</th>
-                    </thead>
-                <% for(var i = 0; i < events.length; i++) {%>
-                    <tbody style="font-size: 1.8em">
-                        <td><%= events[i].name %></td>
-                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#<%=i%>">View</button></td>
-                    </tbody>
-                    <div class="modal" id="<%=i%>">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
 
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title"><%= events[i].name %></h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
+                <%- include partials/side_nav.ejs %>
+                    <div class="content-wrapper">
+                        <h3 class="page-title">Events</h3>
+                        <table class="table table-bordered text-center">
+                            <thead style="font-weight:bolder; font-size: 2em;">
+                                <th>Event</th>
+                                <th>Action</th>
+                            </thead>
+                            <% for(var i = 0; i < events.length; i++) {%>
+                                <tbody style="font-size: 1.8em">
+                                    <td>
+                                        <%= events[i].name %>
+                                    </td>
+                                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#<%=i%>">View</button></td>
+                                </tbody>
+                                <div class="modal" id="<%=i%>">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
 
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <%= events[i].content %>
-                            <br>
-                            <br>
-                            <div style="font-size: 0.8em">
-                                <b>Starts:</b> <%= events[i].startTime %> hours -- <%= events[i].startDate %> <br>
-                                <b>Ends:</b> <%= events[i].endTime %> hours -- <%= events[i].endDate %>
-                            </div>
-                        </div>
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">
+                                                    <%= events[i].name %>
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
 
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                        </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <%= events[i].content %>
+                                                    <br>
+                                                    <br>
+                                                    <div style="font-size: 0.8em">
+                                                        <b>Starts:</b>
+                                                        <%= events[i].startTime %> hours --
+                                                            <%= events[i].startDate %> <br>
+                                                                <b>Ends:</b>
+                                                                <%= events[i].endTime %> hours --
+                                                                    <%= events[i].endDate %>
+                                                    </div>
+                                            </div>
 
-                        </div>
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                        </table>
                     </div>
-                    </div>
-                <% } %>
-                </table>
-        </div>
 
             </div>
 

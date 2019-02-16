@@ -66,166 +66,220 @@
                                         <% if(type === "PHC") {%>
                                             <h3 class="page-title">Public Healthcare Centre</h3>
                                             <% } %>
+                                                <% if(type === "NGO") {%>
+                                                    <h3 class="page-title">Non-Governmental Organisation</h3>
+                                                    <% } %>
 
-                                                <div class="row grid-margin">
-                                                    <div class="col-12 col-md-4 grid-margin grid-margin-md-0">
-                                                        <div class="card">
-                                                            <div class="card-body">
-                                                                <h2 class="card-title text-center">Details</h2>
-                                                                <div class="table-responsive">
-                                                                    <table class="table center-aligned-table">
+                                                        <div class="row grid-margin">
+                                                            <div class="col-12 col-md-4 grid-margin grid-margin-md-0">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h2 class="card-title text-center">Details</h2>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table center-aligned-table">
 
-                                                                        <% if(type === "Patient") {%>
-                                                                            <thead>
-                                                                                <tr class="text-primary text-center">
-                                                                                    <td colspan="2" class="text-center">
-                                                                                        <img src="./images/patient.jpeg" alt="Profile picture" height="200px" width="200px">
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                                <tr class="text-center">
-                                                                                    <th>Name: </th>
-                                                                                    <td>Siwani</td>
-                                                                                </tr>
-                                                                                <tr class="text-center">
-                                                                                    <th>Date of Birth: </th>
-                                                                                    <td>6
-                                                                                        <sup>th</sup> October 1975</td>
-
-                                                                                </tr>
-                                                                                <tr class="text-center">
-                                                                                    <th>Address: </th>
-                                                                                    <td>101 B , Keshari Enclave
-                                                                                        <br>Nuashahi , Nayapalli , Bhubaneswar</td>
-                                                                                </tr>
-                                                                                <tr class="text-center">
-                                                                                    <th>Contact: </th>
-                                                                                    <td>7896543201</td>
-                                                                                </tr>
-                                                                                <tr class="text-center">
-                                                                                    <th>Blood Group: </th>
-                                                                                    <td>A+</td>
-                                                                                </tr>
-                                                                                <tr class="text-center">
-                                                                                    <th>Conceiving Date: </th>
-                                                                                    <td>16/Sep/18</td>
-                                                                                </tr>
-                                                                                <tr class="text-center">
-                                                                                    <th>Expected Date of Delivery: </th>
-                                                                                    <td>22/June/19</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                            <% } %>
-                                                                                <% if(type === "AWC") {%>
+                                                                                <% if(type === "Patient") {%>
                                                                                     <thead>
                                                                                         <tr class="text-primary text-center">
                                                                                             <td colspan="2" class="text-center">
-                                                                                                <img src="./images/awc.jpg" alt="Profile picture" height="200px" width="200px">
+                                                                                                <img src="./images/patient.jpeg" alt="Profile picture" height="200px" width="200px">
                                                                                             </td>
                                                                                         </tr>
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr class="text-center">
                                                                                             <th>Name: </th>
-                                                                                            <td>Dibya</td>
+                                                                                            <td>Siwani</td>
+                                                                                        </tr>
+                                                                                        <tr class="text-center">
+                                                                                            <th>Date of Birth: </th>
+                                                                                            <td>6
+                                                                                                <sup>th</sup> October 1975</td>
+
                                                                                         </tr>
                                                                                         <tr class="text-center">
                                                                                             <th>Address: </th>
-                                                                                            <td>Kujanga, Jagatsighpur, Odisha</td>
+                                                                                            <td>101 B , Keshari Enclave
+                                                                                                <br>Nuashahi , Nayapalli , Bhubaneswar</td>
                                                                                         </tr>
                                                                                         <tr class="text-center">
                                                                                             <th>Contact: </th>
                                                                                             <td>7896543201</td>
                                                                                         </tr>
+                                                                                        <tr class="text-center">
+                                                                                            <th>Blood Group: </th>
+                                                                                            <td>A+</td>
+                                                                                        </tr>
+                                                                                        <tr class="text-center">
+                                                                                            <th>Conceiving Date: </th>
+                                                                                            <td>16/Sep/18</td>
+                                                                                        </tr>
+                                                                                        <tr class="text-center">
+                                                                                            <th>Expected Date of Delivery: </th>
+                                                                                            <td>22/June/19</td>
+                                                                                        </tr>
                                                                                     </tbody>
                                                                                     <% } %>
-                                                                    </table>
-                                                                </div>
-                                                                <!--
+                                                                                        <% if(type === "AWC") {%>
+                                                                                            <thead>
+                                                                                                <tr class="text-primary text-center">
+                                                                                                    <td colspan="2" class="text-center">
+                                                                                                        <img src="./images/awc.jpg" alt="Profile picture" height="200px" width="200px">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr class="text-center">
+                                                                                                    <th>Name: </th>
+                                                                                                    <td>Dibya</td>
+                                                                                                </tr>
+                                                                                                <tr class="text-center">
+                                                                                                    <th>Address: </th>
+                                                                                                    <td>Kujanga, Jagatsighpur, Odisha</td>
+                                                                                                </tr>
+                                                                                                <tr class="text-center">
+                                                                                                    <th>Contact: </th>
+                                                                                                    <td>7896543201</td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                            <% } %>
+
+                                                                                                <% if(type === "PHC") {%>
+                                                                                                    <thead>
+                                                                                                        <tr class="text-primary text-center">
+                                                                                                            <td colspan="2" class="text-center">
+                                                                                                                <img src="./images/phc.jpeg" alt="Profile picture" height="200px" width="200px">
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr class="text-center">
+                                                                                                            <th>Name: </th>
+                                                                                                            <td>Kujanga PHC</td>
+                                                                                                        </tr>
+                                                                                                        <tr class="text-center">
+                                                                                                            <th>Address: </th>
+                                                                                                            <td>Kujanga, Jagatsighpur, Odisha</td>
+                                                                                                        </tr>
+                                                                                                        <tr class="text-center">
+                                                                                                            <th>Contact: </th>
+                                                                                                            <td>7896543201</td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                    <% } %>
+                                                                                                        <% if(type === "NGO") {%>
+                                                                                                            <thead>
+                                                                                                                <tr class="text-primary text-center">
+                                                                                                                    <td colspan="2" class="text-center">
+                                                                                                                        <img src="./images/fmch.gif" alt="Profile picture" height="200px" width="200px">
+                                                                                                                    </td>
+                                                                                                                </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+                                                                                                                <tr class="text-center">
+                                                                                                                    <th>Name: </th>
+                                                                                                                    <td>Foundation for Mother and Child Health</td>
+                                                                                                                </tr>
+                                                                                                                <tr class="text-center">
+                                                                                                                    <th>Address: </th>
+                                                                                                                    <td>New Delhi, India.</td>
+                                                                                                                </tr>
+                                                                                                                <tr class="text-center">
+                                                                                                                    <th>Contact: </th>
+                                                                                                                    <td>+91-896543201</td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                            <% } %>
+                                                                            </table>
+                                                                        </div>
+                                                                        <!--
                                     <div class="card-body bg-primary text-white" id="context-menu-simple">
                                         <p class="card-text">
                                             Right click somewhere in this colored area for simple context menu
                                         </p>
                                     </div>
                                     -->
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-8">
-                                                        <div class="card">
-                                                            <% if(type === "Patient") {%>
-                                                                <div class="card-body" style="padding-bottom: 0px;">
-                                                                    <h2 class="card-title" style="margin-bottom: 0px;">Your Anganwadi Centre(AWC)</h2>
-                                                                    <div class="card-body" id="context-menu-access">
-                                                                        <p style="font-weight: 100; font-size: 25px; margin-bottom: 0px;">Kujanga AWC: +91-204985302</p>
-                                                                        <p style="font-weight: 100; font-size: 14px;">Kujanga, Jagatsighpur, Odisha</p>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="col-12 col-md-8">
+                                                                <div class="card">
+                                                                    <% if(type === "Patient") {%>
+                                                                        <div class="card-body" style="padding-bottom: 0px;">
+                                                                            <h2 class="card-title" style="margin-bottom: 0px;">Your Anganwadi Centre(AWC)</h2>
+                                                                            <div class="card-body" id="context-menu-access">
+                                                                                <p style="font-weight: 100; font-size: 25px; margin-bottom: 0px;">Kujanga AWC: +91-204985302</p>
+                                                                                <p style="font-weight: 100; font-size: 14px;">Kujanga, Jagatsighpur, Odisha</p>
+                                                                            </div>
+                                                                        </div>
 
-                                                                <div class="card-body" style="padding-bottom: 0px;">
-                                                                    <h2 class="card-title" style="margin-bottom: 0px;">Your Auxillary Nursing Mid-wife(ANM)</h2>
-                                                                    <div class="card-body" id="context-menu-access">
-                                                                        <p style="font-weight: 100; font-size: 25px; margin-bottom: 0px;">Dibya: +91-2049853212</p>
-                                                                        <p style="font-weight: 100; font-size: 14px;">Kujanga, Jagatsighpur, Odisha</p>
-                                                                    </div>
-                                                                </div>
+                                                                        <div class="card-body" style="padding-bottom: 0px;">
+                                                                            <h2 class="card-title" style="margin-bottom: 0px;">Your Auxillary Nursing Mid-wife(ANM)</h2>
+                                                                            <div class="card-body" id="context-menu-access">
+                                                                                <p style="font-weight: 100; font-size: 25px; margin-bottom: 0px;">Dibya: +91-2049853212</p>
+                                                                                <p style="font-weight: 100; font-size: 14px;">Kujanga, Jagatsighpur, Odisha</p>
+                                                                            </div>
+                                                                        </div>
 
-                                                                <div class="card-body" style="padding-bottom: 0px;">
-                                                                    <h2 class="card-title" style="margin-bottom: 0px;">Your Public Healthcare Center(PHC)</h2>
-                                                                    <div class="card-body" id="context-menu-access">
-                                                                        <p style="font-weight: 100; font-size: 25px; margin-bottom: 0px;">Kujanga PHC: +91-2049853212</p>
-                                                                        <p style="font-weight: 100; font-size: 14px;">Kujanga, Jagatsighpur, Odisha</p>
-                                                                    </div>
-                                                                </div>
-                                                                <% } %>
-
-                                                                    <% if(type === "AWC") {%>
-                                                                        <div class="card-body">
-                                                                            <h2 class="card-title">Missed Vaccinations</h2>
-                                                                            <div class="card-body  text-white" id="context-menu-access">
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-striped">
-                                                                                        <thead>
-                                                                                            <tr class="">
-                                                                                                <th style="color:blue; font-size:19px;">Patient Id</th>
-                                                                                                <th style="color:blue; font-size:19px;">Patient Name</th>
-                                                                                                <th style="color:blue; font-size:19px;">Contact No.</th>
-                                                                                                <th style="color:blue; font-size:19px;">Address</th>
-                                                                                                <th style="color:blue; font-size:19px;">Type</th>
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <th scope="row">1023</th>
-                                                                                                <td>Anita Desai</td>
-                                                                                                <td>276840376</td>
-                                                                                                <td>Kujanga</td>
-                                                                                                <td>Tetanus</td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <th scope="row">1002</th>
-                                                                                                <td>Sanjukta Mohapatra</td>
-                                                                                                <td>7854123698</td>
-                                                                                                <td>Olatpur</td>
-                                                                                                <td>BCG</td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <th scope="row">1052</th>
-                                                                                                <td>Meneka Gowda</td>
-                                                                                                <td>7854123698</td>
-                                                                                                <td>Palasahi</td>
-                                                                                                <td>Tetanus</td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
+                                                                        <div class="card-body" style="padding-bottom: 0px;">
+                                                                            <h2 class="card-title" style="margin-bottom: 0px;">Your Public Healthcare Center(PHC)</h2>
+                                                                            <div class="card-body" id="context-menu-access">
+                                                                                <p style="font-weight: 100; font-size: 25px; margin-bottom: 0px;">Kujanga PHC: +91-2049853212</p>
+                                                                                <p style="font-weight: 100; font-size: 14px;">Kujanga, Jagatsighpur, Odisha</p>
                                                                             </div>
                                                                         </div>
                                                                         <% } %>
+
+                                                                            <% if(type === "AWC" || type == "PHC") {%>
+                                                                                <div class="card-body">
+                                                                                    <h2 class="card-title">Missed Vaccinations</h2>
+                                                                                    <div class="card-body  text-white" id="context-menu-access">
+                                                                                        <div class="table-responsive">
+                                                                                            <table class="table table-striped">
+                                                                                                <thead>
+                                                                                                    <tr class="">
+                                                                                                        <th style="color:blue; font-size:19px;">Patient Id</th>
+                                                                                                        <th style="color:blue; font-size:19px;">Patient Name</th>
+                                                                                                        <th style="color:blue; font-size:19px;">Contact No.</th>
+                                                                                                        <th style="color:blue; font-size:19px;">Address</th>
+                                                                                                        <th style="color:blue; font-size:19px;">Type</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <th scope="row">1023</th>
+                                                                                                        <td>Anita Desai</td>
+                                                                                                        <td>276840376</td>
+                                                                                                        <td>Kujanga</td>
+                                                                                                        <td>Tetanus</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <th scope="row">1002</th>
+                                                                                                        <td>Sanjukta Mohapatra</td>
+                                                                                                        <td>7854123698</td>
+                                                                                                        <td>Olatpur</td>
+                                                                                                        <td>BCG</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <th scope="row">1052</th>
+                                                                                                        <td>Meneka Gowda</td>
+                                                                                                        <td>7854123698</td>
+                                                                                                        <td>Palasahi</td>
+                                                                                                        <td>Tetanus</td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <% } %>
+
+
+
+
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
                     </div>
 
                     <footer class="footer">
