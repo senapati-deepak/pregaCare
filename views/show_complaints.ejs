@@ -25,7 +25,7 @@
         <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-left navbar-brand-wrapper">
                 <a class="navbar-brand brand-logo-mini" href="#"><i class="fa fa-female"></i></a>
-                <a class="navbar-brand brand-logo" href="/"><i class="fa fa-female"></i>PregAssist</a>
+                <a class="navbar-brand brand-logo" href="/"><i class="fa fa-female"></i>PregaCare</a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
                 <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -47,53 +47,57 @@
             <div class="row row-offcanvas row-offcanvas-right">
 
                 <!-- Side Nav-->
-                
-            <%- include partials/side_nav.ejs %>
-            <div class="content-wrapper">
-                <h3 class="page-title">Complaints</h3>
-                <table class="table table-bordered text-center">
-                    <thead style="font-weight:bolder; font-size: 2em;">
-                        <th>Complaint</th>
-                        <th>Action</th>
-                    </thead>
-                <% for(var i = 0; i<complaints.length; i++) {%>
-                    <tbody style="font-size: 1.8em">
-                        <td><%= complaints[i].title %></td>
-                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#<%=i%>">View</button></td>
-                    </tbody>
-                    <div class="modal" id="<%=i%>">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
 
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title"><%= complaints[i].title %></h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
+                <%- include partials/side_nav.ejs %>
+                    <div class="content-wrapper">
+                        <h3 class="page-title">Complaints</h3>
+                        <table class="table table-bordered text-center">
+                            <thead style="font-weight:bolder; font-size: 2em;">
+                                <th>Complaint</th>
+                                <th>Action</th>
+                            </thead>
+                            <% for(var i = 0; i<complaints.length; i++) {%>
+                                <tbody style="font-size: 1.8em">
+                                    <td>
+                                        <%= complaints[i].title %>
+                                    </td>
+                                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#<%=i%>">View</button></td>
+                                </tbody>
+                                <div class="modal" id="<%=i%>">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
 
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <%= complaints[i].content %>
-                        </div>
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">
+                                                    <%= complaints[i].title %>
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
 
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                        </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <%= complaints[i].content %>
+                                            </div>
 
-                        </div>
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                        </table>
                     </div>
-                    </div>
-                <% } %>
-                </table>
-        </div>
 
             </div>
 
             <footer class="footer">
                 <div class="container-fluid clearfix">
                     <span class="float-right">
-                        <a href="#">Illuminati</a> &copy; 2018
+                        <a href="#">Flying Neurons</a> &copy; 2019
                     </span>
                 </div>
             </footer>

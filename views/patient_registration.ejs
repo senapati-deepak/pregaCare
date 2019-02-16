@@ -30,7 +30,7 @@
                     <i class="fa fa-female"></i>
                 </a>
                 <a class="navbar-brand brand-logo" href="/">
-                    <i class="fa fa-female"></i>PregAssist</a>
+                    <i class="fa fa-female"></i>PregaCare</a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
                 <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -57,71 +57,71 @@
             <div class="row row-offcanvas row-offcanvas-right">
 
                 <!-- Side Nav-->
-                
-                <%- include partials/side_nav.ejs %>
-                <div class="content-wrapper">
-                    <h3 class="page-title">Patient Registration</h3>
-                    <div class="row mb-2">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
 
-                                    <!-- Form Registration -->
-                                    <form class="forms-sample" id="reg-form">
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Patient Name:</label>
-                                                <input type="text" class="form-control p-input" id="name" aria-describedby="emailHelp">
+                <%- include partials/side_nav.ejs %>
+                    <div class="content-wrapper">
+                        <h3 class="page-title">Patient Registration</h3>
+                        <div class="row mb-2">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <!-- Form Registration -->
+                                        <form class="forms-sample" id="reg-form">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Patient Name:</label>
+                                                    <input type="text" class="form-control p-input" id="name" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">DOB:</label>
+                                                    <input type="date" class="form-control p-input" id="age" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">DOB:</label>
-                                                <input type="date" class="form-control p-input" id="age" aria-describedby="emailHelp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Education:</label>
+                                                    <input type="text" class="form-control p-input" id="edu" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Occupation:</label>
+                                                    <input type="text" class="form-control p-input" id="occu" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Education:</label>
-                                                <input type="text" class="form-control p-input" id="edu" aria-describedby="emailHelp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Contact No.:</label>
+                                                    <input type="text" class="form-control p-input" id="contact" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Address:</label>
+                                                    <input type="text" class="form-control p-input" id="address" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Occupation:</label>
-                                                <input type="text" class="form-control p-input" id="occu" aria-describedby="emailHelp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Date of Conceiving:</label>
+                                                    <input type="date" class="form-control p-input" id="doc" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Expected Delivery Date:</label>
+                                                    <input type="date" class="form-control p-input" id="dod" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Contact No.:</label>
-                                                <input type="text" class="form-control p-input" id="contact" aria-describedby="emailHelp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">No. of Children:</label>
+                                                    <input type="text" class="form-control p-input" id="noc" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Complications:</label>
+                                                    <input type="text" class="form-control p-input" id="comp" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Address:</label>
-                                                <input type="text" class="form-control p-input" id="address" aria-describedby="emailHelp">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Date of Conceiving:</label>
-                                                <input type="date" class="form-control p-input" id="doc" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Expected Delivery Date:</label>
-                                                <input type="date" class="form-control p-input" id="dod" aria-describedby="emailHelp">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">No. of Children:</label>
-                                                <input type="text" class="form-control p-input" id="noc" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Complications:</label>
-                                                <input type="text" class="form-control p-input" id="comp" aria-describedby="emailHelp">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Blood Group:</label>
-                                                <select type="text" class="form-control p-input" id="blgrp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Blood Group:</label>
+                                                    <select type="text" class="form-control p-input" id="blgrp">
                                                     <option value="O+ve">O+ve</option>
                                                     <option value="O-ve">O-ve</option>
                                                     <option value="A+ve">A+ve</option>
@@ -131,47 +131,47 @@
                                                     <option value="AB+ve">AB+ve</option>
                                                     <option value="AB-ve">AB-ve</option>
                                                 </select>
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Height(cm):</label>
+                                                    <input type="text" class="form-control p-input" id="ht" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Height(cm):</label>
-                                                <input type="text" class="form-control p-input" id="ht" aria-describedby="emailHelp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Weight(kg):</label>
+                                                    <input type="text" class="form-control p-input" id="wt" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Allergy(if any):</label>
+                                                    <input type="text" class="form-control p-input" id="alleg" aria-describedby="emailHelp">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Weight(kg):</label>
-                                                <input type="text" class="form-control p-input" id="wt" aria-describedby="emailHelp">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="exampleInputEmail1">Remarks:</label>
+                                                    <input type="text" class="form-control p-input" id="rem" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
+                                                </div>
                                             </div>
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Allergy(if any):</label>
-                                                <input type="text" class="form-control p-input" id="alleg" aria-describedby="emailHelp">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                                <label for="exampleInputEmail1">Remarks:</label>
-                                                <input type="text" class="form-control p-input" id="rem" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
-                                            </div>
-                                        </div>
 
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
-                </div>
-
-                <footer class="footer">
-                    <div class="container-fluid clearfix">
-                        <span class="float-right">
-                            <a href="#">Illuminati</a> &copy; 2018
+                    <footer class="footer">
+                        <div class="container-fluid clearfix">
+                            <span class="float-right">
+                            <a href="#">Flying Neurons</a> &copy; 2019
                         </span>
-                    </div>
-                </footer>
+                        </div>
+                    </footer>
             </div>
 
         </div>

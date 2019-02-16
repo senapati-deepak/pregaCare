@@ -23,129 +23,127 @@
 </head>
 
 <body class="sidebar-mini">
-<div class="container-scroller">
+    <div class="container-scroller">
 
-    <!-- Top Navbar -->
-    <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="text-left navbar-brand-wrapper">
-            <a class="navbar-brand brand-logo-mini" href="#">
-                <i class="fa fa-female"></i>
-            </a>
-            <a class="navbar-brand brand-logo" href="/">
-                <i class="fa fa-female"></i>PregaAssist</a>
-        </div>
-        <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
-            <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-left navbar-brand-wrapper">
+                <a class="navbar-brand brand-logo-mini" href="#">
+                    <i class="fa fa-female"></i>
+                </a>
+                <a class="navbar-brand brand-logo" href="/">
+                    <i class="fa fa-female"></i>PregaCare</a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
+                <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
                           <span class="navbar-toggler-icon"></span>
                         </button> -->
-            <ul class="navbar-nav ml-lg-auto">
-                <!-- Google translate dropdown -->
-                <div id="google_translate_element"></div>
+                <ul class="navbar-nav ml-lg-auto">
+                    <!-- Google translate dropdown -->
+                    <div id="google_translate_element"></div>
 
-            </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
-    </nav>
+            </div>
+        </nav>
 
-    <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper">
 
-        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="row row-offcanvas row-offcanvas-right">
 
-            <!-- Side Nav-->
-            
+                <!-- Side Nav-->
+
                 <%- include partials/side_nav.ejs %>
-            <div class="content-wrapper">
-                <h3 class="page-title">Upload/View Patient Records</h3>
-                <div class="row mb-2">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
+                    <div class="content-wrapper">
+                        <h3 class="page-title">Upload/View Patient Records</h3>
+                        <div class="row mb-2">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
 
-                                <!-- Form Registration -->
-                                <h2 class="page-title">Upload Patient Records</h2>
-                                <form action="/upload" method="POST" enctype="multipart/form-data">
-                                    <div class="row">
-                                        <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                            <label for="file" class="custom-file-label">Patient ID:</label>
-                                            <input type="text" name="patid" class="p-input form-control">
-                                        </div>
+                                        <!-- Form Registration -->
+                                        <h2 class="page-title">Upload Patient Records</h2>
+                                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="file" class="custom-file-label">Patient ID:</label>
+                                                    <input type="text" name="patid" class="p-input form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="file" class="custom-file-label">Choose File</label>
+                                                    <input type="file" name="file" id="file" class="p-input form-control">
+                                                </div>
+                                            </div>
+                                            <input type="submit" value="Submit" class="btn btn-primary">
+                                        </form> <br>
+                                        <h2 class="page-title">View Patient Records</h2>
+                                        <form>
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                                                    <label for="file" class="custom-file-label">Patient ID:</label>
+                                                    <input type="text" name="patid" id="patid" class="p-input form-control">
+                                                </div>
+                                            </div>
+                                            <button id="findFiles" class="btn btn-primary">FIND</button>
+                                        </form>
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                            <label for="file" class="custom-file-label">Choose File</label>
-                                            <input type="file" name="file" id="file" class="p-input form-control">
-                                        </div>
-                                    </div>
-                                    <input type="submit" value="Submit" class="btn btn-primary">
-                                </form> <br>
-                                <h2 class="page-title">View Patient Records</h2>
-                                <form>
-                                    <div class="row">
-                                        <div class="form-group col-sm-12 col-xs-12 col-md-6 col-lg-6">
-                                            <label for="file" class="custom-file-label">Patient ID:</label>
-                                            <input type="text" name="patid" id="patid" class="p-input form-control">
-                                        </div>
-                                    </div>
-                                    <button id="findFiles" class="btn btn-primary">FIND</button>
-                                </form>
+                                    <div id="results"></div>
+                                </div>
                             </div>
-                            <div id="results"></div>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+
+                    <footer class="footer">
+                        <div class="container-fluid clearfix">
+                            <span class="float-right">
+                            <a href="#">Flying Neurons</a> &copy; 2019
+                        </span>
+                        </div>
+                    </footer>
             </div>
 
-            <footer class="footer">
-                <div class="container-fluid clearfix">
-                        <span class="float-right">
-                            <a href="#">Illuminati</a> &copy; 2018
-                        </span>
-                </div>
-            </footer>
         </div>
 
     </div>
 
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<script src="js/off-canvas.js"></script>
-<script src="js/sidebar-icon.js"></script>
-<script src="js/hoverable-collapse.js"></script>
-<script src="js/misc.js"></script>
-<script src="js/patient_reg.js"></script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
-<script src="js/off-canvas.js"></script>
-<script src="js/sidebar-icon.js"></script>
-<script src="js/hoverable-collapse.js"></script>
-<script src="js/misc.js"></script>
-<script src="js/alerts.js"></script>
-<script src="js/records.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/sidebar-icon.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/patient_reg.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/sidebar-icon.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/records.js"></script>
 
 
 
-<script type="text/javascript">
-    /////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////// For initializing the google translate dropdown////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////
+    <script type="text/javascript">
+        /////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////// For initializing the google translate dropdown////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////
 
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-
-
-</script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
 
 </body>
 

@@ -29,7 +29,7 @@
                     <i class="fa fa-female"></i>
                 </a>
                 <a class="navbar-brand brand-logo" href="/">
-                    <i class="fa fa-female"></i>PregAssist</a>
+                    <i class="fa fa-female"></i>PregaCare</a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-self-stretch align-items-center">
                 <!-- <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -51,68 +51,68 @@
             <div class="row row-offcanvas row-offcanvas-right">
 
                 <!-- Side Nav-->
-                
+
                 <%- include partials/side_nav.ejs %>
 
-                <div class="content-wrapper">
-                    <h3 class="page-title">ASHA Worker List</h3>
-                    <div class="row mb-2">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <!-- Table for ASHA worker's List -->
-                                    <div class="table-responsive">
-                                        <table class="table center-aligned-table" id="table_id">
-                                            <thead>
-                                                <tr class="text-primary">
-                                                    <th>Id</th>
-                                                    <th>Ashaworker Name</th>
-                                                    <th>Contact No.</th>
-                                                    <th>Address</th>
-                                                    <th>Date of Birth</th>
-                                                    <th>Date of Joining</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <% for(var i=0; i < workers.length; i++) { %>
-                                                    <tr>
-                                                        <td>
-                                                            <%= i + 1 %>
-                                                        </td>
-                                                        <td>
-                                                            <%= workers[i].name %>
-                                                        </td>
-                                                        <td>
-                                                            <%= workers[i].contact %>
-                                                        </td>
-                                                        <td>
-                                                            <%= workers[i].address %>
-                                                        </td>
-                                                        <td>
-                                                            <%= workers[i].dob %>
-                                                        </td>
-                                                        <td>
-                                                            <%= workers[i].dateOfJoining %>
-                                                        </td>
+                    <div class="content-wrapper">
+                        <h3 class="page-title">ASHA Worker List</h3>
+                        <div class="row mb-2">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- Table for ASHA worker's List -->
+                                        <div class="table-responsive">
+                                            <table class="table center-aligned-table" id="table_id">
+                                                <thead>
+                                                    <tr class="text-primary">
+                                                        <th>Id</th>
+                                                        <th>Ashaworker Name</th>
+                                                        <th>Contact No.</th>
+                                                        <th>Address</th>
+                                                        <th>Date of Birth</th>
+                                                        <th>Date of Joining</th>
                                                     </tr>
-                                                    <% } %>
-                                            </tbody>
-                                        </table>
+                                                </thead>
+                                                <tbody>
+                                                    <% for(var i=0; i < workers.length; i++) { %>
+                                                        <tr>
+                                                            <td>
+                                                                <%= i + 1 %>
+                                                            </td>
+                                                            <td>
+                                                                <%= workers[i].name %>
+                                                            </td>
+                                                            <td>
+                                                                <%= workers[i].contact %>
+                                                            </td>
+                                                            <td>
+                                                                <%= workers[i].address %>
+                                                            </td>
+                                                            <td>
+                                                                <%= workers[i].dob %>
+                                                            </td>
+                                                            <td>
+                                                                <%= workers[i].dateOfJoining %>
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
-                </div>
-
-                <footer class="footer">
-                    <div class="container-fluid clearfix">
-                        <span class="float-right">
-                            <a href="#">Illuminati</a> &copy; 2018
+                    <footer class="footer">
+                        <div class="container-fluid clearfix">
+                            <span class="float-right">
+                            <a href="#">Flying Neurons</a> &copy; 2019
                         </span>
-                    </div>
-                </footer>
+                        </div>
+                    </footer>
             </div>
 
         </div>
