@@ -6,9 +6,10 @@ $(document).ready(function() {
         var content = $("#content").val();
         $.post("/api/new_complaint", {title: title, content: content}, function(data) {
             console.log(data);
-            alert("Complaint Filed!");
-            location.reload();
-        });
+            swal("Complaint Filed!", "", "success");
+            $("#title").val("");
+            $("#content").val("");
+        }); 
     });
 
 
