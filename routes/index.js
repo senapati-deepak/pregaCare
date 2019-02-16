@@ -8,6 +8,7 @@ var router = express.Router();
 var patientModel = require('../models/patient');
 var workerModel = require('../models/worker');
 var complaintModel = require('../models/complaint');
+var eventModel = require('../models/event');
 
 
 /* GET home page. */
@@ -99,8 +100,12 @@ router.get("/create_event", function(req, res, next) {
 });
 
 router.get("/show_events", function(req, res, next) {
+    console.log("heloooo");
     if(req.session.user && req.session.type) {
-        res.render('show_events.ejs', { type: req.session.type, user: req.session.user });
+        eventModel.find({}, function(err, docs) {
+            if(err) throw err;
+            res.render('show_events.ejs', { type: req.session.type, user: req.session.user, events: docs });
+        });
     } else {
         res.redirect("/");
     }

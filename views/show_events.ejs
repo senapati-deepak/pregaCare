@@ -47,84 +47,52 @@
             <div class="row row-offcanvas row-offcanvas-right">
 
                 <!-- Side Nav-->
+                
+            <%- include partials/side_nav.ejs %>
+            <div class="content-wrapper">
+                <h3 class="page-title">Events</h3>
+                <table class="table table-bordered text-center">
+                    <thead style="font-weight:bolder; font-size: 2em;">
+                        <th>Event</th>
+                        <th>Action</th>
+                    </thead>
+                <% for(var i = 0; i < events.length; i++) {%>
+                    <tbody style="font-size: 1.8em">
+                        <td><%= events[i].name %></td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#<%=i%>">View</button></td>
+                    </tbody>
+                    <div class="modal" id="<%=i%>">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
 
-                <%- include partials/side_nav.ejs %>
-
-                    <!-- Table for Diet Plan -->
-                    <div class="content-wrapper">
-                        <h3 class="page-title">Diet Plan</h3>
-                        <div class="table-responsive row">
-                            <div class="col-md-2"></div>
-                            <table class="table table-striped col-md-6">
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="3">
-                                            <h6>1st Trimester</h6>
-                                        </td>
-                                        <td>Folate</td>
-                                        <td>Leafy green vegetables, Citrus fruits, Beans, Breads, Cereals, Rice, Pastas.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vitamin B6</td>
-                                        <td>Meat, fish, vegetable, fruits, nuts, wholegrains.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Iron-rich meals</td>
-                                        <td>Meat, fish, Poultry, Bean, Pea, Lentil, Green Leafy Vegetables.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="col-md-2"></div>
-                        </div>
-                        <br>
-                        <div class="table-responsive row">
-                            <div class="col-md-2"></div>
-                            <table class="table table-striped col-md-6">
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="3">
-                                            <h6>2nd Trimester</h6>
-                                        </td>
-                                        <td>Calcium</td>
-                                        <td> milk, cheese and yogurt, seafood, leafy greens, legumes, dried fruit.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vitamin D</td>
-                                        <td>mushroom, cheese, egg, fish.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Omega 3 fatty acid</td>
-                                        <td>fish, seed, walnut.</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                            <div class="col-md-2"></div>
-                        </div>
-                        <br>
-                        <div class="table-responsive row">
-                            <div class="col-md-2"></div>
-                            <table class="table table-striped col-md-6">
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="3">
-                                            <h6>3rd Trimester</h6>
-                                        </td>
-                                        <td>Energy Rich foods</td>
-                                        <td>Carbohydrates, fats.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vitamin K</td>
-                                        <td>Green leafy vegetables,,Vegetables,Fish, liver, meat, eggs, and cereals.</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                            <div class="col-md-2"></div>
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"><%= events[i].name %></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <%= events[i].content %>
+                            <br>
+                            <br>
+                            <div style="font-size: 0.8em">
+                                <b>Starts:</b> <%= events[i].startTime %> hours -- <%= events[i].startDate %> <br>
+                                <b>Ends:</b> <%= events[i].endTime %> hours -- <%= events[i].endDate %>
+                            </div>
+                        </div>
 
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+
+                        </div>
                     </div>
+                    </div>
+                <% } %>
+                </table>
+        </div>
 
             </div>
 

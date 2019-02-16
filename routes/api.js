@@ -11,6 +11,7 @@ var workers = require('../controllers/workers')
 var patients = require('../controllers/patients')
 var signup = require('../controllers/signup')
 var complaint = require('../controllers/complaint')
+var event = require('../controllers/event')
 
 /* To test api route is working. */
 router.get('/', function(req, res, next) {
@@ -30,6 +31,7 @@ router.get('/logout', function(req, res) {
 
 
 router.post('/new_complaint', complaint.NewComplaint);
+router.post('/create_event', event.NewEvent);
 
 
 
